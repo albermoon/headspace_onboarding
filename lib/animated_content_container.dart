@@ -9,7 +9,9 @@ import 'package:manipulation/animated_widgets/animated_typer_text.dart';
 import 'package:manipulation/animated_widgets/animated_welcome_container.dart';
 import 'package:manipulation/components/background_container.dart';
 
+/// Main content body for the onboarding animation
 class AnimatedContentContainer extends StatefulWidget {
+  /// Constructor function for [AnimatedContentContainer]
   const AnimatedContentContainer({super.key});
 
   @override
@@ -21,6 +23,8 @@ class _AnimatedContentContainerState extends State<AnimatedContentContainer>
     with SingleTickerProviderStateMixin<AnimatedContentContainer> {
   /// General controller for the onboarding animation
   late AnimationController _controller;
+
+  /// Animation value for the various moving part of the animation
   late Animation<int> _textTyperAnimation;
   late Animation<Offset> _offsetValue;
   late Animation<double> _sizeCircle;

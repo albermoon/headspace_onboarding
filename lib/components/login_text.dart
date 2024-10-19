@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// Container for the login and create account content
 class LoginTextContainer extends StatelessWidget {
   const LoginTextContainer({super.key});
 

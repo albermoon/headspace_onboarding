@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// Animated widget for the face circle
 class AnimatedCircle extends StatelessWidget {
   const AnimatedCircle({
     super.key,

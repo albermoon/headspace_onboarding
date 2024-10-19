@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:manipulation/components/login_text.dart';
 
+/// Animated widget for the Welcome and Login text buttons
 class AnimatedWelcomeContainer extends StatelessWidget {
   const AnimatedWelcomeContainer({
     super.key,

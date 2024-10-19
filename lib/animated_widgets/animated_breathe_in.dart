@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Animated widget for the Breathe in widget
 class AnimatedBreatheIn extends StatelessWidget {
   const AnimatedBreatheIn({
     super.key,

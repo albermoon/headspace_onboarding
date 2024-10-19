@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Animated widget for hiding the animaing circle widget
 class AnimatedHideValue extends StatelessWidget {
   const AnimatedHideValue({
     super.key,

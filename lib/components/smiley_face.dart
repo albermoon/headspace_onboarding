@@ -2,10 +2,12 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+/// CustomPainter for the smiley face rendering
 class FacePainter extends CustomPainter {
-  // Animation value
+  /// Animation value for smiling effect
   final double fraction;
-  FacePainter({this.fraction = 0});
+
+  FacePainter({required this.fraction});
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -19,7 +21,6 @@ class FacePainter extends CustomPainter {
     double degToRad(num deg) => deg * (pi / 180.0);
 
     Path path = Path();
-    // Adds a quarter arc
 
     // First eye
     path.arcTo(

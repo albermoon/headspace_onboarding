@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Background for the onboarding experience
 class BackgroundContainer extends StatelessWidget {
   const BackgroundContainer({
     super.key,
@@ -14,6 +15,8 @@ class BackgroundContainer extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(height: 80),
+
+          // The phone widget
           Container(
             height: 220,
             width: 120,

@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:manipulation/components/smiley_face.dart';
 
+/// Animated widget for the smiley face
 class AnimatedSmileFace extends StatelessWidget {
   const AnimatedSmileFace({
     super.key,

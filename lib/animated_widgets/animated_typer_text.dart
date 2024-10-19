@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Animated widget for the typer text widget
 class AnimatedTyperText extends StatelessWidget {
   final _text = ' headspace®';
   const AnimatedTyperText({
