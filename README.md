@@ -1,16 +1,30 @@
-# manipulation
+# Headspace Onboarding Animation
+This is the replica of [Headspace](https://www.headspace.com/) mobile app onboarding animation
 
-A new Flutter project.
 
-## Getting Started
+## Installation
+To run this app locally, follow these steps:
 
-This project is a starting point for a Flutter application.
+1. Clone the repo locally
 
-A few resources to get you started if this is your first Flutter project:
+```bash
+git clone https://github.com/danielkiing3/headspace_onboarding.git
+cd headspace_onboarding
+```
+2. Install dependencies:
+```bash
+flutter pub get
+```
+3. Run the app:
+```bash
+flutter run
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# 💬 Contact
+If you have any questions or feedback, feel free to reach out:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Email: oluwaferanmiidaniel@gmail.com
+
+GitHub: [danielkiing3](https://github.com/danielkiing3)
+
+Twitter: [@daniel_kiing3](https://twitter.com/daniel_kiing3)
