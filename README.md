@@ -1,6 +1,10 @@
 # Headspace Onboarding Animation
 This is the replica of [Headspace](https://www.headspace.com/) mobile app onboarding animation
 
+# Demo Video
+https://github.com/user-attachments/assets/cab2ea2a-f64b-4b8c-8c0b-1e22aa3ee479
+
+
 
 ## Installation
 To run this app locally, follow these steps:
