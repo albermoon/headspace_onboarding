@@ -2,7 +2,11 @@
 This is the replica of [Headspace](https://www.headspace.com/) mobile app onboarding animation
 
 # Demo Video
-https://github.com/user-attachments/assets/cab2ea2a-f64b-4b8c-8c0b-1e22aa3ee479
+
+
+https://github.com/user-attachments/assets/a068a165-4116-4378-bba6-7b9d82dd2cac
+
+
 
 
 
