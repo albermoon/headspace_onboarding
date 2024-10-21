@@ -9,7 +9,10 @@ class AnimatedCircle extends StatelessWidget {
   })  : _offsetValue = offsetValue,
         _sizeCircle = sizeCircle;
 
+  // Animation value for the offset value of the circle
   final Animation<Offset> _offsetValue;
+
+  // Animation value of the size value of the circle
   final Animation<double> _sizeCircle;
 
   @override

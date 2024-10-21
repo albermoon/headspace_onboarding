@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
+/// Animated widget for the blue background
 class AnimatedBlueBackground extends StatelessWidget {
   const AnimatedBlueBackground({
     super.key,
     required Animation<double> blueBackgroundAnimation,
   }) : _blueBackgroundAnimation = blueBackgroundAnimation;
 
+  // Animation value for the translation of the blue background
   final Animation<double> _blueBackgroundAnimation;
 
   @override

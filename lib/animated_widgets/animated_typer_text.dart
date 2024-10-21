@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// Animated widget for the typer text widget
+/// Animated widget for the typer text
 class AnimatedTyperText extends StatelessWidget {
   final _text = ' headspace®';
   const AnimatedTyperText({
@@ -8,6 +8,7 @@ class AnimatedTyperText extends StatelessWidget {
     required Animation<int> textTyperAnimation,
   }) : _textTyperAnimation = textTyperAnimation;
 
+  // Animation to control the animated text typer
   final Animation<int> _textTyperAnimation;
 
   @override
@@ -15,6 +16,7 @@ class AnimatedTyperText extends StatelessWidget {
     return AnimatedBuilder(
       animation: _textTyperAnimation,
       builder: (context, child) {
+        // Substring the text [_text] as the animation value changes
         String text = _text.substring(0, _textTyperAnimation.value);
         return Text(
           text,

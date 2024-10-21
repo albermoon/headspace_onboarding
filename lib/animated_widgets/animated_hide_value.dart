@@ -9,7 +9,10 @@ class AnimatedHideValue extends StatelessWidget {
   })  : _hide = hide,
         _coverHeight = coverHeight;
 
+  // Animation value to show the hide container
   final Animation<int> _hide;
+
+  // Animation to increase the height of the hide container has the background shrinks
   final Animation<double> _coverHeight;
 
   @override

@@ -18,7 +18,7 @@ class FacePainter extends CustomPainter {
       ..strokeWidth = 9;
 
     // Method to convert degree to radians
-    double degToRad(num deg) => deg * (pi / 180.0);
+    double degToRad(double deg) => deg * (pi / 180.0);
 
     Path path = Path();
 
@@ -45,6 +45,8 @@ class FacePainter extends CustomPainter {
           center: Offset(size.width / 2, -30), width: 200, height: 200),
       degToRad(70 - fraction), // Subtract value
       degToRad(40 + (fraction * 2)), // Add twice the value
+      /// Read about addArc works in the flutter docs to understand the above part
+      /// https://api.flutter.dev/flutter/dart-ui/Path/addArc.html
     );
     canvas.drawPath(path, paint);
   }

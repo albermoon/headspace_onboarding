@@ -7,7 +7,7 @@ class LoginTextContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 40, right: 40, bottom: 20, top: 20),
+      padding: const EdgeInsets.only(left: 40, right: 40, top: 40),
       child: Column(
         children: [
           const Text(

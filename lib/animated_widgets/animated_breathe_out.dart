@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 /// Animated widget for the Breathe out widget
 //TODO: Turn the Breathe in and out widget to a single widget
+
 class AnimatedBreatheOut extends StatelessWidget {
   const AnimatedBreatheOut({
     super.key,

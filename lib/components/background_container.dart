@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 /// Background for the onboarding experience
+///
 class BackgroundContainer extends StatelessWidget {
   const BackgroundContainer({
     super.key,

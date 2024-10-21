@@ -16,9 +16,16 @@ class AnimatedSmileFace extends StatelessWidget {
         _smileRotate = smileRotate,
         _smile = smile;
 
+  // Animation for the smile scale effect
   final Animation<double> _smileyScale;
+
+  // Animation for the smile cordinated offset
   final Animation<Offset> _smileyOffset;
+
+  // Animation for the smile rotation
   final Animation<double> _smileRotate;
+
+  // Animation for the actual smiling face
   final Animation<double> _smile;
 
   @override
