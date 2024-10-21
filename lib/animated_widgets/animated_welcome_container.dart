@@ -5,21 +5,18 @@ import 'package:manipulation/components/login_text.dart';
 class AnimatedWelcomeContainer extends StatelessWidget {
   const AnimatedWelcomeContainer({
     super.key,
-    required Animation<double> welcomeAnimation,
+    required Animation<Offset> welcomeAnimation,
   }) : _welcomeAnimation = welcomeAnimation;
 
-  final Animation<double> _welcomeAnimation;
+  final Animation<Offset> _welcomeAnimation;
 
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
       animation: _welcomeAnimation,
       builder: (context, child) {
-        return Transform.translate(
-          offset: Offset(
-            0,
-            _welcomeAnimation.value,
-          ),
+        return SlideTransition(
+          position: _welcomeAnimation,
           child: child,
         );
       },
