@@ -7,6 +7,7 @@ import 'package:manipulation/animated_widgets/animated_hide_value.dart';
 import 'package:manipulation/animated_widgets/animated_smile_face.dart';
 import 'package:manipulation/animated_widgets/animated_typer_text.dart';
 import 'package:manipulation/animated_widgets/animated_welcome_container.dart';
+
 import 'package:manipulation/components/background_container.dart';
 
 /// Main content body for the onboarding animation
@@ -37,12 +38,15 @@ class _AnimatedContentContainerState extends State<AnimatedContentContainer>
   late Animation<double> _secondTextOpacity;
   late Animation<double> _secondTextScale;
   late Animation<double> _blueBackgroundAnimation;
-  late Animation<double> _welcomeAnimation;
+  late Animation<Offset> _welcomeAnimation;
   late Animation<int> _hide;
   late Animation<double> _coverHeight;
 
   // Text to be animated
   final _text = ' headspace®';
+
+  //TODO: Explore the idea of using multi animation controller
+  //TODO: Convert all animation to method body
 
   @override
   void initState() {
@@ -62,34 +66,9 @@ class _AnimatedContentContainerState extends State<AnimatedContentContainer>
     );
 
     // Animation for size and offset of Main circle
-    _sizeCircle = TweenSequence<double>(
-      [
-        TweenSequenceItem(
-          tween: Tween(begin: 1, end: 9),
-          weight: 29,
-        ),
-        TweenSequenceItem(
-          tween: Tween<double>(begin: 9, end: 11)
-              .chain(CurveTween(curve: Curves.easeIn)),
-          weight: 29,
-        ),
-        TweenSequenceItem(
-          tween: Tween<double>(begin: 11, end: 9)
-              .chain(CurveTween(curve: Curves.easeOut)),
-          weight: 29,
-        ),
-        TweenSequenceItem(
-          tween: Tween(begin: 9, end: 2.5),
-          weight: 14,
-        ),
-      ],
-    ).animate(
-      CurvedAnimation(
-        parent: _controller,
-        curve: const Interval(0.18, 0.88),
-      ),
-    );
+    getCircleSize();
 
+    // Circle animation offset values
     _offsetValue = TweenSequence<Offset>([
       TweenSequenceItem(
         tween:
@@ -192,11 +171,10 @@ class _AnimatedContentContainerState extends State<AnimatedContentContainer>
       ),
     );
 
-    // Animation for the welcome container
-    _welcomeAnimation = Tween<double>(
-      begin: 900,
-      end: 450,
-    ).animate(
+    // Animation for the login and welcome
+    _welcomeAnimation =
+        Tween<Offset>(begin: const Offset(0, 1), end: const Offset(0, 0.5))
+            .animate(
       CurvedAnimation(
         parent: _controller,
         curve: const Interval(
@@ -290,6 +268,37 @@ class _AnimatedContentContainerState extends State<AnimatedContentContainer>
     );
 
     _controller.forward();
+  }
+
+  /// -- Function to get the circle size animation
+  Animation<double> getCircleSize() {
+    return _sizeCircle = TweenSequence<double>(
+      [
+        TweenSequenceItem(
+          tween: Tween(begin: 1, end: 9),
+          weight: 29,
+        ),
+        TweenSequenceItem(
+          tween: Tween<double>(begin: 9, end: 11)
+              .chain(CurveTween(curve: Curves.easeIn)),
+          weight: 29,
+        ),
+        TweenSequenceItem(
+          tween: Tween<double>(begin: 11, end: 9)
+              .chain(CurveTween(curve: Curves.easeOut)),
+          weight: 29,
+        ),
+        TweenSequenceItem(
+          tween: Tween(begin: 9, end: 2.5),
+          weight: 14,
+        ),
+      ],
+    ).animate(
+      CurvedAnimation(
+        parent: _controller,
+        curve: const Interval(0.18, 0.88),
+      ),
+    );
   }
 
   @override
